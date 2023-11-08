@@ -10,13 +10,13 @@
 
         <h3> Register Here </h3>
 
-        <form action="/perform_registration">
+        <form action="/perform_registration" method="post">
             <label> Name </label> <br>
-            <input type="text"> <br>
+            <input type="text" name="user_name"> <br>
             <label> Email </label> <br> 
-            <input type="email"> <br>
+            <input type="email" name="user_email"> <br>
             <label> Password </label> <br>
-            <input type="password"> <br> <br>
+            <input type="password" name="user_password"> <br> <br>
             <input type="submit" value="Register">
         </form>
 
