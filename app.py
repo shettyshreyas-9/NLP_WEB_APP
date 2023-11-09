@@ -30,4 +30,17 @@ def perform_registration():
 
     # return name +" " +email +" " +password
 
+
+@app.route('/perform_login', methods=['post'])
+def perform_login():
+    email= request.form.get('user_email')
+    password= request.form.get('user_password')
+
+    response= dbo.search(email,password)
+    if response==1:
+        return "Welcome"
+    else:
+        return "Incorrect email/password"
+
+
 app.run(debug=True)
